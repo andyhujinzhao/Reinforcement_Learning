@@ -1,0 +1,98 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% preamble
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass{book}
+\usepackage{ctex} % Chinese
+
+% code block
+\usepackage{listings}
+\usepackage{xcolor}
+\lstset{ 
+ numbers=left,                                        % 在左侧显示行号
+ numberstyle=\tiny\color{black},                      % 设定行号格式
+ frame=none,                                          % 不显示背景边框
+ backgroundcolor=\color[RGB]{224,224,244},            % 设定背景颜色
+ keywordstyle=\color[RGB]{40,40,255},                 % 设定关键字颜色
+ numberstyle=\footnotesize\color{darkgray},           
+ commentstyle=\it\color[RGB]{0,96,96},                % 设置代码注释的格式
+ stringstyle=\rmfamily\slshape\color[RGB]{128,0,0},   % 设置字符串格式
+ showstringspaces=ture,                               % 不显示字符串中的空格
+ language=Python,                                     % 设置语言
+}
+
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 递归
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{递归}
+程序调用自身的编程技巧称为递归
+\section{示例}
+计算斐波那契数列的第n项：1，1，2，3，5，8，...
+\begin{lstlisting} 
+def fib(n):
+    if n == 1:
+        return 1
+    elif n == 2:
+        return 1
+    else:
+        return fib(n-1)+fib(n-2)
+\end{lstlisting}   
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 动态规划
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{动态规划}
+\section{概念}
+\section{示例}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 强化学习
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{强化学习}
+\section{马尔可夫过程}
+\section{马尔可夫决策过程}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Value-based
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Value-based}
+\section{Q-learning}
+\subsection{Paper}
+\subsection{Code}
+\subsection{收敛性证明}
+%-------------------------------------------------
+\section{DQN}
+\subsection{Paper}
+\subsection{Code}
+\subsection{衍生}
+\subsubsection{Double DQN}
+\subsubsection{Dueling Network}
+\subsubsection{Prioritized Replay}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Policy-based
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Policy-based}
+\section{Policy Gradient}
+\subsection{Paper}
+\subsection{Code}
+%-------------------------------------------------
+\section{DPG}
+\subsection{Paper}
+\subsection{Code}
+%-------------------------------------------------
+\section{DDPG}
+\subsection{Paper}
+\subsection{Code}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Actor-Critic
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Actor-Critic} 
+\section{AC}
+\subsection{Paper}
+\subsection{Code}
+%-------------------------------------------------
+\section{A2C}
+\subsection{Paper}
+\subsection{Code}
+%-------------------------------------------------
+\section{A3C}
+\subsection{Paper}
+\subsection{Code}
+\end{document}
